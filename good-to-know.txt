@@ -1,0 +1,12 @@
+# good-to-know.txt
+# dotfile git idea from: https://www.atlassian.com/git/tutorials/dotfiles
+
+# find out which shells are available
+$ chsh -l
+
+# permanently use fish https://fishshell.com/
+$ chsh --shell /usr/bin/fish
+
+#########
+# common kbd shortcuts
+# close sh 	| ctrl + D
