@@ -9,4 +9,4 @@ $ chsh --shell /usr/bin/fish
 
 #########
 # common kbd shortcuts
-# close sh 	| ctrl + D
+# close ssh 	| ctrl + D

@@ -1,0 +1,40 @@
+# Gitignore
+# see this gist for a template: https://gist.github.com/runxel/f3d8caeb01b8b4af30bb8841f92ba0a1
+
+*.cache
+*.pyc
+
+*.lnk
+*.url
+
+# Thumbnails
+._*
+Thumbs.db
+ehthumbs.db
+.Bridge*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+**/Network Trash Folder/
+**/Temporary Items/
+.apdisk
+.directory
+
+# NPM dependencies
+node_modules/
+
+# editor related
+*.sublime-*
+.vscode
+.vscodeignore

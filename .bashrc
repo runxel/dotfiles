@@ -1,10 +1,12 @@
 # .bashrc
+### Used on my servers ###
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+# use the NE (nice editor)
 export EDITOR=ne
 export VISUAL=ne
 

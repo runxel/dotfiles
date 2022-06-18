@@ -1,0 +1,96 @@
+/*
+ * Edit this file and copy it as userChrome.css into your
+ * profile-directory/chrome/
+ */
+
+/*
+ * This file can be used to customize the look of Mozilla's user interface
+ * You should consider using !important on rules which you want to
+ * override default settings.
+ */
+
+/*
+ * Do not remove the @namespace line -- it's required for correct functioning
+ */
+/* @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); */
+/* set default namespace to XUL */
+@namespace html "http://www.w3.org/1999/xhtml";
+/* also needed since Mozilla gave up on XUL*/
+
+/*
+ * For examples see http://www.mozilla.org/unix/customizing.html
+ */
+
+
+:root {
+	/* CSS variables are possible; set my favorite accent color */
+	--lux-accent-color: #FFBF00;
+}
+
+/* Get rid of the shitty white lines in sidebar */
+treechildren::-moz-tree-cell(hover),
+treechildren::-moz-tree-cell-text(hover),
+treechildren::-moz-tree-row(hover) {
+	-moz-appearance: none !important;
+	outline: none !important;
+}
+
+/* Change the color of the active tab highlight line */
+/* NOT LONGER USED after the latest redesign. Now tabs look like buttons smh */
+.tab-line[selected="true"] {
+	background-color: var(--lux-accent-color) !important;
+	/* this sets the color of the line above the active tab */
+}
+
+/* Helps with those nasty dark favicons by adding a background */
+.tab-icon-image {
+	/* background-color: hsla(0,0%,100%,0.3) !important;
+    border-radius: 25%;
+    padding: 1px; */
+	transform: scale(1.3);
+}
+
+/*  Changes the selection highlight color in the urlbar */
+/* doesnt work anymore: html|*.urlbar-input::-moz-selection { */
+#urlbar-input::-moz-selection,
+::-moz-selection {
+	background-color: var(--lux-accent-color) !important;
+	color: black !important;
+}
+
+/* highlight border when focused */
+#urlbar:-moz-lwtheme[focused="true"],
+#urlbar:-moz-lwtheme:hover,
+#navigator-toolbox .searchbar-textbox:-moz-lwtheme[focused="true"],
+#navigator-toolbox .searchbar-textbox:-moz-lwtheme:hover {
+	/*border-color: hsla(170, 69%, 75%, 0.8) !important;*/
+	border-color: var(--lux-accent-color) !important;
+}
+
+/* urlbar selected item */
+.autocomplete-richlistitem[selected=true],
+.searchbar-treebody::-moz-tree-row(selected) {
+	background-color: var(--lux-accent-color) !important;
+	color: black !important;
+}
+
+.searchbar-treebody::-moz-tree-row(hover),
+popupset#mainPopupSet panel#PopupAutoCompleteRichResult .autocomplete-richlistitem:hover,
+treechildren.searchbar-treebody::-moz-tree-row(hover) {
+	background-color: var(--lux-accent-color) !important;
+}
+
+.searchbar-engine-one-off-item[selected] {
+	background-color: var(--lux-accent-color) !important;
+}
+
+/* Set bookmark star color when starred */
+#star-button[starred] {
+	fill: var(--lux-accent-color) !important;
+}
+
+/* Obscure feature that enables the use of JS external files
+   so we would be able to style the scrollbar */
+/* toolbarbutton#alltabs-button {
+    -moz-binding: url("userChrome.xml#js")
+} */

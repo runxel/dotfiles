@@ -1,0 +1,10 @@
+# .gitattributes
+# default behavior, in case people don't have core.autocrlf set
+* text=auto
+
+# truly binary; should not be modified
+*.png  binary
+*.jpg  binary
+
+# exlude from statistics
+# foobar/*  linguist-vendored
