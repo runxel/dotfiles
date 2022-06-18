@@ -1,6 +1,7 @@
 /*
  * Edit this file and copy it as userChrome.css into your
  * profile-directory/chrome/
+ * BEWARE: From v69 needs to be anabled with `toolkit.legacyUserProfileCustomizations.stylesheets` in the about:config set to 'true'.
  */
 
 /*
